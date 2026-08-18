@@ -1,0 +1,247 @@
+/* ============================================================
+   裴士忠个人主页 — 学术简洁风
+   ============================================================ */
+
+:root {
+  --accent: #1b3a5b;        /* 深藏青（学术主色） */
+  --accent-soft: #eef3f8;   /* 淡蓝底 */
+  --accent-line: #d6e1ec;   /* 分隔线 */
+  --ink: #20242c;           /* 正文 */
+  --muted: #5c6570;         /* 次要文字 */
+  --paper: #ffffff;
+  --serif: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- 顶部导航 ---------- */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--accent-line);
+}
+
+.nav-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(180deg, var(--accent-soft), var(--paper));
+  border-bottom: 1px solid var(--accent-line);
+  text-align: center;
+  padding: 4.5rem 1.5rem 3.5rem;
+}
+
+.hero-inner { max-width: 860px; margin: 0 auto; }
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+}
+
+.hero .subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+}
+
+.hero .affiliation {
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.hero .tagline {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ---------- 分节 ---------- */
+.container { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+
+.section { padding: 3.5rem 0; }
+.section.alt { background: var(--accent-soft); border-top: 1px solid var(--accent-line); border-bottom: 1px solid var(--accent-line); }
+
+.section h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-line);
+}
+
+.section p { margin-bottom: 1rem; }
+
+.note {
+  font-size: 0.88rem;
+  color: var(--muted);
+  background: #faf6ea;
+  border-left: 3px solid #d9b35c;
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+}
+
+/* ---------- 时间线 ---------- */
+.timeline { list-style: none; }
+.timeline li {
+  padding: 1rem 0;
+  border-left: 2px solid var(--accent-line);
+  padding-left: 1.5rem;
+  margin-left: 0.5rem;
+  position: relative;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 1.4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--paper);
+}
+
+.timeline-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.school { font-family: var(--serif); font-weight: 700; font-size: 1.1rem; color: var(--ink); }
+
+.period {
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: var(--paper);
+  border: 1px solid var(--accent-line);
+  padding: 0.1rem 0.7rem;
+  border-radius: 999px;
+}
+
+.timeline-body { margin-top: 0.35rem; color: var(--muted); font-size: 0.95rem; }
+
+/* ---------- 荣誉 ---------- */
+.honors { list-style: none; }
+.honors li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--paper);
+  border: 1px solid var(--accent-line);
+  border-radius: 10px;
+  margin-bottom: 0.9rem;
+  transition: box-shadow 0.2s;
+}
+
+.honors li:hover { box-shadow: 0 4px 16px rgba(27, 58, 91, 0.08); }
+
+.honor-badge { font-size: 1.4rem; line-height: 1.4; }
+
+.honor-text h3 { font-family: var(--serif); font-size: 1.05rem; color: var(--accent); }
+
+.honor-meta { font-size: 0.85rem; color: var(--muted); margin-top: 0.15rem; }
+
+.honors-footnote {
+  margin-top: 1.2rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+  background: var(--accent-soft);
+  border: 1px dashed var(--accent-line);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+}
+
+.honors-footnote a { color: var(--accent); }
+
+/* ---------- 联系 ---------- */
+.contact { list-style: none; }
+.contact li {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px dashed var(--accent-line);
+}
+
+.contact-label {
+  min-width: 5.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.92rem;
+}
+
+.contact a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--accent-line); transition: border-color 0.2s, color 0.2s; }
+.contact a:hover { color: var(--accent); border-color: var(--accent); }
+
+.email-placeholder { color: var(--muted); font-size: 0.9rem; font-style: italic; }
+
+/* ---------- 页脚 ---------- */
+.footer {
+  background: var(--accent);
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.footer p { margin-bottom: 0.35rem; font-size: 0.9rem; }
+.footer-note { opacity: 0.65; font-size: 0.8rem; }
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 640px) {
+  .hero { padding: 3rem 1rem 2.5rem; }
+  .hero h1 { font-size: 2.2rem; }
+  .nav-links a { margin-left: 1rem; font-size: 0.88rem; }
+  .section { padding: 2.5rem 0; }
+  .timeline-head { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+}
