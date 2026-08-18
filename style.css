@@ -204,6 +204,46 @@ body {
 
 .honors-footnote a { color: var(--accent); }
 
+/* ---------- 项目经历 ---------- */
+.projects { list-style: none; }
+.projects li {
+  padding: 1.4rem 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--accent-line);
+  border-radius: 10px;
+  margin-bottom: 0.9rem;
+  transition: box-shadow 0.2s;
+}
+
+.projects li:hover { box-shadow: 0 4px 16px rgba(27, 58, 91, 0.08); }
+
+.project-head { margin-bottom: 0.5rem; }
+
+.project-kind {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  padding: 0.1rem 0.75rem;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.project-title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.project-body {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0;
+}
+
 /* ---------- 联系 ---------- */
 .contact { list-style: none; }
 .contact li {
